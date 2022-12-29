@@ -59,7 +59,7 @@ function menu() {
 }
 
 function briefintroduction() {
-    document.title = '简介 - PBS系统';
+    document.title = '简介 - PBS系统官网';
     $('body')
         .append(menu())
         .append($('<div></div>')
@@ -89,7 +89,7 @@ function briefintroduction() {
                         .append($('<p></p>')
                             .append($('<span></span>')
                                 .attr('class', 'ui large text')
-                                .text('PBS系统')
+                                .text('PBS系统官网')
                             )
                         )
                         .append($('<p></p>')
@@ -103,7 +103,7 @@ function briefintroduction() {
 }
 
 function updatelog() {
-    document.title = '更新日志 - PBS系统';
+    document.title = '更新日志 - PBS系统官网';
     let blogs = [], search = '';
     function refresh() {
         let list = $('#list').empty();
@@ -182,7 +182,7 @@ function updatelog() {
 }
 
 function updatelogSub() {
-    document.title = '更新日志 - PBS系统';
+    document.title = '更新日志 - PBS系统官网';
     let id = location.hash.split('#/updatelogSub/')[1];
     $('body')
         .append(menu())
@@ -221,7 +221,7 @@ function updatelogSub() {
 }
 
 function download() {
-    document.title = '下载 - PBS系统';
+    document.title = '下载 - PBS系统官网';
     $('body')
         .append(menu())
         .append($('<div></div>')
@@ -251,12 +251,12 @@ function download() {
                         .append($('<p></p>')
                             .append($('<span></span>')
                                 .attr('class', 'ui large text')
-                                .text('PBS 1.0(2022-12-28)系统')
+                                .text('PBS 1.0(2022-12-31)系统')
                             )
                         )
                         .append($('<a></a>')
                             .attr('src2', 'https://www.luogu.com.cn/training/265688')
-                            .text('PBS 1.0(2022-12-28)系统下载链接')
+                            .text('PBS 1.0(2022-12-31)系统下载链接')
                         )
                         .removeAttr('id');
                 })
