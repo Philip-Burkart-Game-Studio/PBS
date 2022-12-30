@@ -16,6 +16,10 @@
             $('body').html('');
             download();
             break;
+        case '#/versionhistory':
+            $('body').html('');
+            versionhistory();
+            break;
         default:
             if (location.hash.search('#/updatelogSub/') != -1) {
                 $('body').html('');
@@ -56,6 +60,14 @@ function menu() {
             })
             .text('下载')
         )
+        .append($('<a></a>')
+            .attr('class', 'item')
+            .attr('id', 'menu4')
+            .click(function () {
+                location.hash = '#/versionhistory';
+            })
+            .text('历史版本')
+        )
 }
 
 function briefintroduction() {
@@ -64,13 +76,13 @@ function briefintroduction() {
         .append(menu())
         .append($('<div></div>')
             .attr('class', 'ui large segment')
-            .css({ 'margin-top': '3%', 'margin-left': '15%', 'margin-right': '15%' })
+            .css({ 'margin-top': '1%', 'margin-left': '15%', 'margin-right': '15%' })
             .append($('<div></div>')
                 .attr('class', 'ui two column very relaxed grid')
                 .append($('<div></div>')
                     .append($('<p></p>')
                         .append($('<img></img>')
-                            .attr('class', 'ui big bordered image')
+                            .attr('class', 'ui middle bordered image')
                             .css('margin', '5px')
                             .css('margin-left', '10px')
                             .attr('src', 'https://www.helloimg.com/images/2022/12/29/oCJtMt.jpg')
@@ -88,12 +100,24 @@ function briefintroduction() {
                     $('#my').empty()
                         .append($('<p></p>')
                             .append($('<span></span>')
-                                .attr('class', 'ui large text')
+                                .attr('class', 'ui big text')
                                 .text('PBS系统官网')
                             )
                         )
                         .append($('<p></p>')
-                            .text('PBS系统是由思远游戏工作室编写的一个系统，长期更新！！')
+                            .append($('<span></span>')
+                                .attr('class', 'ui large text')
+                                .text('PBS系统是由思远游戏工作室编写的一个系统，长期更新！！')
+                            )
+                        )
+                        .append($('<p></p>')
+                            .text('更新日志是PBS系统每一个版本相较于前一个版本的更新记录；')
+                        )
+                        .append($('<p></p>')
+                            .text('下载是PBS每一个大版本的最终正式版；')
+                        )
+                        .append($('<p></p>')
+                            .text('历史版本是PBS系统更新历程中每一个大版本的非最终正式版的版本。')
                         )
                         .removeAttr('id');
                 })
@@ -251,16 +275,95 @@ function download() {
                         .append($('<p></p>')
                             .append($('<span></span>')
                                 .attr('class', 'ui large text')
-                                .text('PBS 1.0(2022-12-31)系统')
+                                .text('PBS 1.0系统 [PBS 1.0(2022-12-31)系统]')
                             )
                         )
                         .append($('<a></a>')
-                            .attr('src2', 'https://www.luogu.com.cn/training/265688')
-                            .text('PBS 1.0(2022-12-31)系统下载链接')
+                            .attr('href', 'https://www.luogu.com.cn/training/265688')
+                            .text('PBS 1.0系统下载链接')
+                        )
+                        .removeAttr('id');
+                })
+            )
+            .append($('<div></div>')
+                .attr('class', 'ui two column very relaxed grid')
+                .append($('<div></div>')
+                    .append($('<p></p>')
+                        .append($('<img></img>')
+                            .attr('class', 'ui small bordered image')
+                            .css('margin', '5px')
+                            .css('margin-left', '10px')
+                            .attr('src', 'https://www.helloimg.com/images/2022/12/29/oCJtMt.jpg')
+                        )
+                    )
+                )
+                .append($('<div></div>')
+                    .attr('class', 'column')
+                    .attr('id', 'my')
+                    .append($('<p></p>')
+                        .text('Loading...')
+                    )
+                )
+                .ready(function () {
+                    $('#my').empty()
+                        .append($('<p></p>')
+                            .append($('<span></span>')
+                                .attr('class', 'ui large text')
+                                .text('PBS 2.0系统 []')
+                            )
+                        )
+                        .append($('<a></a>')
+                            .attr('href', '')
+                            .text('PBS 2.0系统下载链接')
                         )
                         .removeAttr('id');
                 })
             )
         );
     $('#menu3').attr('class', 'active item');
+}
+
+function versionhistory() {
+    document.title = '历史版本 - PBS系统官网';
+    $('body')
+        .append(menu())
+        .append($('<div></div>')
+            .attr('class', 'ui large segment')
+            .css({ 'margin-top': '3%', 'margin-left': '15%', 'margin-right': '15%' })
+            .append($('<div></div>')
+                .attr('class', 'ui two column very relaxed grid')
+                .append($('<div></div>')
+                    .append($('<p></p>')
+                        .append($('<img></img>')
+                            .attr('class', 'ui small bordered image')
+                            .css('margin', '5px')
+                            .css('margin-left', '10px')
+                            .attr('src', 'https://www.helloimg.com/images/2022/12/29/oCJtMt.jpg')
+                        )
+                    )
+                )
+                .append($('<div></div>')
+                    .attr('class', 'column')
+                    .attr('id', 'my')
+                    .append($('<p></p>')
+                        .text('Loading...')
+                    )
+                )
+                .ready(function () {
+                    $('#my').empty()
+                        .append($('<p></p>')
+                            .append($('<span></span>')
+                                .attr('class', 'ui large text')
+                                .text('PBS 2.0(2023-1-1)系统')
+                            )
+                        )
+                        .append($('<a></a>')
+                            .attr('href', '')
+                            .text('PBS 2.0(2023-1-1)系统下载链接')
+                        )
+                        .removeAttr('id');
+                })
+            )
+        );
+    $('#menu4').attr('class', 'active item');
 }
