@@ -358,7 +358,7 @@ function versionhistory() {
                             )
                         )
                         .append($('<a></a>')
-                            .attr('href', '')
+                            .attr('href', 'https://www.luogu.com.cn/training/265981')
                             .text('PBS 2.0(2023-1-1)系统下载链接')
                         )
                         .removeAttr('id');
